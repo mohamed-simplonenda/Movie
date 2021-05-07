@@ -1,16 +1,32 @@
-import{Form,FormControl,Button} from 'react-bootstrap';
+
 import Slider from './slider';
-import Menu from './navbar';
-import Footer from './footer';
+import {Link} from 'react-router-dom'
 import Movie from './movies';
+import{Form,FormControl,Button} from 'react-bootstrap'
+import React, {useState} from 'react'
+import Menu from './navbar';
 
 
 
 
 function Home() {
+    const [input , setInput] = useState("")
+    const getInput =  (event) => {
+        
+        setInput(event.target.value)
+            }
+
     return(
+
         <div>
     <div className="App">
+
+
+
+        <div >
+           <Menu  getInput={getInput}/>
+        </div>
+
      
     
      <div className="slider">
@@ -25,7 +41,7 @@ function Home() {
      <button variant="outline-dark" className="btnFooter"><i class="fas fa-arrow-right"></i></button>
    </Form>
     <div className="container d-flex justify-content-between flex-wrap mt-5 ">
-    <Movie/>
+    <Movie input={input}/>
     </div>
    
 

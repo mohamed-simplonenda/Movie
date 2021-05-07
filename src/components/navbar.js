@@ -1,9 +1,11 @@
 import{Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
-function Menu() {
+
+function Menu({getInput}) {
+
     return(
         <div >
-            <Navbar  expand="lg" fixed="top" >
+            <Navbar  expand="lg"  >
             <div className="container">
     <Navbar.Brand href="#home">
       <img
@@ -30,13 +32,18 @@ function Menu() {
       </NavDropdown> */}
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="SEARCH"  />
+      <FormControl type="text" placeholder="SEARCH" onChange={getInput}  />
       <Button variant="outline-secondary"><i class="fas fa-search  "></i></Button>
+
     </Form>
     <Link to="/favorit"><i class="fas fa-heart iconeNav "></i><span class="badge bg-warning rounded-circle ml-1" id="val">0</span></Link>
   </Navbar.Collapse>
   </div>
 </Navbar>
+<div>
+      
+        
+        </div>
 
         </div>
     )

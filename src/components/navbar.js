@@ -1,11 +1,11 @@
 import{Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
-function Menu({getInput}) {
+function Menu({getInput,favorites}) {
 
     return(
         <div >
-            <Navbar  expand="lg"  >
+            <Navbar  expand="lg" fixed="top" >
             <div className="container">
     <Navbar.Brand href="#home">
       <img
@@ -23,27 +23,18 @@ function Menu({getInput}) {
     <Link to="/about">ABOUT</Link>
     <Link to="/contact">CONTACT</Link>
 
-      {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown> */}
+
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="SEARCH" onChange={getInput}  />
       <Button variant="outline-secondary"><i class="fas fa-search  "></i></Button>
 
     </Form>
-    <Link to="/favorit"><i class="fas fa-heart iconeNav "></i><span class="badge bg-warning rounded-circle ml-1" id="val">0</span></Link>
+    <Link to="/favorit"><i class="fas fa-heart iconeNav "></i><span class="badge bg-warning rounded-circle ml-1" id="val">{favorites}</span></Link>
   </Navbar.Collapse>
   </div>
 </Navbar>
-<div>
-      
-        
-        </div>
+
 
         </div>
     )

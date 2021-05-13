@@ -3,11 +3,11 @@ import Menu from './navbar';
 
 
 
-const Favorit = () => {
+const Favorit = ({favorites}) => {
   return(
     <div>
-       <Menu />
-        <h1>FAVORITE</h1>
+       <Menu favorites={favorites}/>
+        <h1 className="pt-5">FAVORITE</h1>
     </div>
    )
 

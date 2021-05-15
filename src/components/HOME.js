@@ -9,7 +9,7 @@ import Menu from './navbar';
 
 
 
-function Home({movie,favorites,getFavorites}) {
+function Home({movie,favorites,getFavorites,getFavoriteMovie}) {
     const [input , setInput] = useState("")
     const getInput =  (event) => {
         
@@ -41,7 +41,7 @@ function Home({movie,favorites,getFavorites}) {
      <button variant="outline-dark" className="btnFooter"><i class="fas fa-arrow-right"></i></button>
    </Form>
     <div className="container d-flex justify-content-between flex-wrap mt-5 ">
-    <Movie input={input} movie={movie} getFavorites={getFavorites}/>
+    <Movie input={input} movie={movie} getFavorites={getFavorites} getFavoriteMovie={getFavoriteMovie}/>
     </div>
    
 

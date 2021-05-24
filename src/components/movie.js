@@ -9,7 +9,7 @@ import 'react-rater/lib/react-rater.css'
 
 
 // input
-function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
+function Movies ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
   // const [movie, setMovie] = useState([])
   // const getMovie = ()=>{
     
@@ -23,21 +23,23 @@ function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
 
   
   return(
-    movie.filter(el=>el.title.toLowerCase().includes(input.toLowerCase())
-
-    ).map(el=>
+    movie.filter((el) => {
+        if ((el.Type === "movie" && input === "") || (el.Type === "movie" && el.title.toLowerCase().includes(input.toLowerCase()))){
+         return el
+        }
+       }).map(el=>
       <div >
 
       <Row className="pb-5">
       <Card style={{ width: '16rem',border:'none',marginBottom:'20px' }}>
       <Card.Img variant="top" src={el.Images} height="300px" style={{borderRadius:'5px'}}/>
-      {/* <Card.ImgOverlay className="overlay text-white">
-    <Card.Title className="overlayText">{el.Country} / {el.Language}</Card.Title>
-    <Card.Text className="overlayText">
-    {el.Plot}
-    </Card.Text>
+                {/* <Card.ImgOverlay className="overlay text-white">
+                <Card.Title className="overlayText">{el.Country} / {el.Language}</Card.Title>
+                <Card.Text className="overlayText">
+                {el.Plot}
+                </Card.Text>
 
-  </Card.ImgOverlay> */}
+            </Card.ImgOverlay> */}
         <Card.Body>
     <Card.Title className="card-title">{el.title}</Card.Title>
     <Card.Text>
@@ -67,4 +69,4 @@ function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
 
  }
 
-export default Movie
+export default Movies

@@ -9,7 +9,7 @@ import 'react-rater/lib/react-rater.css'
 
 
 // input
-function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
+function MovieAdmin ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
   // const [movie, setMovie] = useState([])
   // const getMovie = ()=>{
     
@@ -23,9 +23,7 @@ function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
 
   
   return(
-    movie.filter(el=>el.title.toLowerCase().includes(input.toLowerCase())
-
-    ).map(el=>
+    movie.map(el=>
       <div >
 
       <Row className="pb-5">
@@ -67,4 +65,4 @@ function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
 
  }
 
-export default Movie
+export default MovieAdmin

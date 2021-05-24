@@ -7,7 +7,7 @@ const About = ({favorites}) => {
   return(
     <div>
        <Menu favorites={favorites}/>
-        <h1 className="pt-5">About</h1>
+       <h1 className="contact">About</h1>
     </div>
    )
 

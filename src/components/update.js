@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const Update = ({el}) => {
-    const [input,setInput]=useState({ title:el.title, Genre: el.Genre,Year:el.Year ,Images:el.Images,Runtime:el.Runtime,imdbRating:el.imdbRating})
+const Update = ({id,movie}) => {
+    const [input,setInput]=useState({ title:movie[id].title, Genre: movie[id].Genre,Year:movie[id].Year ,Images:movie[id].Images,Runtime:movie[id].Runtime,imdbRating:movie[id].imdbRating})
     const handelCahnge=(e)=>{
         const {name,value}=e.target
         setInput({...input,[name]:value})
@@ -13,7 +13,7 @@ const Update = ({el}) => {
         // function update 
   const updateMovie=(id)=> {
    
-    axios.put(`http://localhost:3010/posts/${id}`,input)
+    axios.put(`https://moviapp-91957-default-rtdb.firebaseio.com/posts/${id}.json`,input)
     .then(response => {
       setInput( response.data);
        
@@ -44,7 +44,7 @@ const Update = ({el}) => {
             <Form.Label>title movie</Form.Label>
             <br></br>
             <Form.Control
-              defaultValue={el.title}
+              defaultValue={movie[id].title}
               type="text"
               name="title"
               onChange={handelCahnge}
@@ -60,7 +60,7 @@ const Update = ({el}) => {
             <Form.Label>genre</Form.Label>
             <br></br>
             <Form.Control
-            defaultValue={el.Genre}
+            defaultValue={movie[id].Genre}
               type="text"
               name="Genre"
               
@@ -74,7 +74,7 @@ const Update = ({el}) => {
             <Form.Label>year</Form.Label>
             <br></br>
             <Form.Control
-            defaultValue={el.Year}
+            defaultValue={movie[id].Year}
               type="text"
               name="Year"
               
@@ -88,7 +88,7 @@ const Update = ({el}) => {
             <Form.Label>Runtime</Form.Label>
             <br></br>
             <Form.Control
-            defaultValue={el.Runtime}
+            defaultValue={movie[id].Runtime}
               type="text"
               name="Runtime"
               
@@ -102,13 +102,13 @@ const Update = ({el}) => {
             <Form.Label>image movie</Form.Label>
             <br></br>
             <Form.Control
-            defaultValue={el.Images}
+            defaultValue={movie[id].Images}
               type="text"
               name="Images"
               
                             onChange={handelCahnge}
 
-              placeholder="Enter url"
+              placeholder="Enter url image"
             />
 
           </Form.Group>
@@ -116,7 +116,7 @@ const Update = ({el}) => {
             <Form.Label>Rating movie</Form.Label>
             <br></br>
             <Form.Control
-            defaultValue={el.imdbRating}
+            defaultValue={movie[id].imdbRating}
               type="text"
               name="imdbRating"
               
@@ -130,7 +130,7 @@ const Update = ({el}) => {
           <Button variant="secondary" className="mr-3" onClick={handleClose1}>
             Close
           </Button>
-          <Button onClick={()=>updateMovie(el.id)} variant="primary"  className="submit">
+          <Button onClick={()=>updateMovie(id)} variant="primary"  className="submit">
             update
           </Button>
           </div>

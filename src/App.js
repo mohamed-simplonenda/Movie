@@ -15,17 +15,19 @@ import SeriePage from './components/seriepage'
 import axios from 'axios'
 import Admin from './components/admin';
 import Update from './components/update';
+// import firebase from "./firebase";
 function App() {
+  const urlMovie='https://moviapp-91957-default-rtdb.firebaseio.com/posts.json'
   const [movie, setMovie] = useState([])
   const getMovie = ()=>{
     
-    axios.get('http://localhost:3010/posts').then((response) => {
-
+      axios.get(urlMovie).then((response) => {
       setMovie( response.data);
       console.log("response:", response);
 
     });
   }
+
   
   useEffect(()=> {getMovie()
   },[])

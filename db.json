@@ -1,33 +1,64 @@
 {
-  "posts": [
+  "posts":
+  [
+   
     {
-      "title": "I Am ",
-      "Genre": "Drama, Horror, Sci-Fi",
+      "title": "I Am Legend",
       "Year": "2007",
+      "Rated": "PG-13",
+      "Released": "14 Dec 2007",
+      "Runtime": "101 min",
+      "Genre": "Drama, Horror, Sci-Fi",
+      "Director": "Francis Lawrence",
+      "Writer": "Mark Protosevich (screenplay), Akiva Goldsman (screenplay), Richard Matheson (novel), John William Corrington, Joyce Hooper Corrington",
+      "Actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
+      "Plot": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "9 wins & 21 nominations.",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTU4NzMyNDk1OV5BMl5BanBnXkFtZTcwOTEwMzU1MQ@@._V1_SX300.jpg",
+      "Metascore": "65",
+      "imdbRating": "3.6",
+      "imdbVotes": "533,874",
+      "imdbID": "tt0480249",
+      "Type": "movie",
+      "Response": "True",
       "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0NTI4NjE3NV5BMl5BanBnXkFtZTYwMDA0Nzc4._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTIwMDg2MDU4M15BMl5BanBnXkFtZTYwMTA0Nzc4._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5MDM1OTU5OV5BMl5BanBnXkFtZTYwMjA0Nzc4._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0MTI2NjMzMzFeQTJeQWpwZ15BbWU2MDMwNDc3OA@@._V1_.jpg"
       ],
-      "Runtime": "101 min",
-      "imdbRating": "3.6",
-      "id": 1
+      "id":1
     },
     {
-      "title": "The ",
-      "Genre": "Action, Sci-Fi",
-      "Year": "2012",
+      
+      "title": "300",
+      "Year": "2006",
+      "Rated": "R",
+      "Released": "09 Mar 2007",
+      "Runtime": "117 min",
+      "Genre": "Action, Drama, Fantasy",
+      "Director": "Zack Snyder",
+      "Writer": "Zack Snyder (screenplay), Kurt Johnstad (screenplay), Michael Gordon (screenplay), Frank Miller (graphic novel), Lynn Varley (graphic novel)",
+      "Actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
+      "Plot": "King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "16 wins & 42 nominations.",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAzNTkzNjcxNl5BMl5BanBnXkFtZTYwNDA4NjE3._V1_SX300.jpg",
+      "Metascore": "52",
+      "imdbRating": "3.9",
+      "imdbVotes": "611,046",
+      "imdbID": "tt0416449",
+      "Type": "movie",
+      "Response": "True",
       "Images": [
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0NjY0NzE4OTReQTJeQWpwZ15BbWU3MDczODg2Nzc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MzEzMjcyM15BMl5BanBnXkFtZTcwNDM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4NzM2Mjc5MV5BMl5BanBnXkFtZTcwMTkwOTY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3MzQ3NjA5N15BMl5BanBnXkFtZTcwMzY5OTY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg"
+        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0MjQzOTEwMV5BMl5BanBnXkFtZTcwMzE2NTIyMw@@._V1_SX1777_CR0,0,1777,947_AL_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwNTgyNTMzNF5BMl5BanBnXkFtZTcwNDA2NTIyMw@@._V1_SX1777_CR0,0,1777,935_AL_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNTg5MzMwMV5BMl5BanBnXkFtZTcwMzA2NTIyMw@@._V1_SX1777_CR0,0,1777,937_AL_.jpg"
       ],
-      "Runtime": "143 min",
-      "imdbRating": "4.1",
-      "id": 3
+      "id":2
     },
     {
       "title": "The Avengers",
@@ -50,19 +81,37 @@
       "imdbID": "tt0848228",
       "Type": "movie",
       "Response": "True",
-      "Images": [
+       "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0NjY0NzE4OTReQTJeQWpwZ15BbWU3MDczODg2Nzc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MzEzMjcyM15BMl5BanBnXkFtZTcwNDM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4NzM2Mjc5MV5BMl5BanBnXkFtZTcwMTkwOTY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3MzQ3NjA5N15BMl5BanBnXkFtZTcwMzY5OTY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg"
       ],
-      "id": 3
+      "id":3
     },
+  
     {
-      "title": "amine",
+      "title": "Interstellar",
+      "Year": "2014",
+      "Rated": "PG-13",
+      "Released": "07 Nov 2014",
+      "Runtime": "169 min",
       "Genre": "Adventure, Drama, Sci-Fi",
-      "Year": "2020",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan, Christopher Nolan",
+      "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+      "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "Language": "English",
+      "Country": "USA, UK",
+      "Awards": "Won 1 Oscar. Another 39 wins & 134 nominations.",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+      "Metascore": "74",
+      "imdbRating": "4.3",
+      "imdbVotes": "937,412",
+      "imdbID": "tt0816692",
+      "Type": "movie",
+      "Response": "True",
       "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3NTEwOTMxMV5BMl5BanBnXkFtZTgwMjMyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQ5ODE2MzEwM15BMl5BanBnXkFtZTgwMTMyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
@@ -70,9 +119,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMzE3MTM0MTc3Ml5BMl5BanBnXkFtZTgwMDIyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNjYzNjE2NDk3N15BMl5BanBnXkFtZTgwNzEyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
       ],
-      "Runtime": "169 min",
-      "imdbRating": "4.3",
-      "id": 4
+      "id":4
     },
     {
       "title": "Game of Thrones",
@@ -103,7 +150,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNjZjNWIzMzQtZWZjYy00ZTkwLWJiMTYtOWRkZDBhNWJhY2JmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNTMyMTRjZWEtM2UxMS00ZjU5LWIxMTYtZDA5YmJhZmRjYTc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SX1777_CR0,0,1777,999_AL_.jpg"
       ],
-      "id": 4
+      "id":5
     },
     {
       "title": "Vikings",
@@ -134,7 +181,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2NTQ2MDA3NF5BMl5BanBnXkFtZTgwODkxMDUxODE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxOTQ3NTA5N15BMl5BanBnXkFtZTgwMzExMDUxODE@._V1_SY1000_SX1500_AL_.jpg"
       ],
-      "id": 5
+      "id":6
     },
     {
       "title": "Gotham",
@@ -165,7 +212,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3MzYzNDgzOV5BMl5BanBnXkFtZTgwMjQwOTM4ODE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwODAyNjk0NF5BMl5BanBnXkFtZTgwODU4MzMyODE@._V1_SY1000_CR0,0,1500,1000_AL_.jpg"
       ],
-      "id": 6
+      "id":7
     },
     {
       "title": "Power",
@@ -189,14 +236,14 @@
       "Type": "series",
       "totalSeasons": "3",
       "Response": "True",
-      "Images": [
+       "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2ODg0MzMzM15BMl5BanBnXkFtZTgwODYxODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyMjA0MzczNV5BMl5BanBnXkFtZTgwNTIyODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk0MTI0NzQ2NV5BMl5BanBnXkFtZTgwMDkxODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4Mzk1ODcxM15BMl5BanBnXkFtZTgwNDQyODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwNTE0NDI1M15BMl5BanBnXkFtZTgwMDQyODA5NTE@._V1_SY1000_SX1500_AL_.jpg"
       ],
-      "id": 7
+      "id":8
     },
     {
       "title": "Narcos",
@@ -220,14 +267,14 @@
       "Type": "series",
       "totalSeasons": "2",
       "Response": "True",
-      "Images": [
+       "Images": [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2MDMzMTc0MF5BMl5BanBnXkFtZTgwMTAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMDkyOTEyNV5BMl5BanBnXkFtZTgwNjY3Mjc3OTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NDUwMTU2NV5BMl5BanBnXkFtZTgwNTI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BODA1NjAyMTQ3Ml5BMl5BanBnXkFtZTgwNjI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NzQ0OTAwNl5BMl5BanBnXkFtZTgwMDAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
       ],
-      "id": 8
+      "id":9
     },
     {
       "title": "Breaking Bad",
@@ -258,7 +305,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAzMTczMjM3NjFeQTJeQWpwZ15BbWU4MDc1MTI1MzAx._V1_SY1000_CR0,0,1495,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5MTE3MTgwMF5BMl5BanBnXkFtZTgwOTQxMjUzMDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
       ],
-      "id": 9
+      "id":10
     },
     {
       "ComingSoon": true,
@@ -287,11 +334,11 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNTAyNTU0NV5BMl5BanBnXkFtZTgwNzMzMDY3OTE@._V1_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5NDc5NzUwNV5BMl5BanBnXkFtZTgwMDM3MDM2NzE@._V1_.jpg"
       ],
-      "id": 10
+      "id":11
     },
     {
       "ComingSoon": true,
-      "title": " A Star Wars Story",
+      "title": " A Star Wars ",
       "Year": "2016",
       "Rated": "N/A",
       "Released": "16 Dec 2016",
@@ -318,7 +365,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNjM4MzExNDAyNl5BMl5BanBnXkFtZTgwOTAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3NTgxMDcyNV5BMl5BanBnXkFtZTgwMDExMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg"
       ],
-      "id": 11
+      "id":12
     },
     {
       "ComingSoon": true,
@@ -343,11 +390,12 @@
       "Type": "movie",
       "Response": "True",
       "Images": [
+        
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOWYzOTctOTc4My00ZmJkLTgzMTctMmUxNDI5ODQzYzNjXkEyXkFqcGdeQXVyNDAyODU1Njc@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BZTY5ZGUxMTAtYTU0OC00NGQ2LTkzNzgtZGZmNjlmNjY3MGU0XkEyXkFqcGdeQXVyNTY0MTkxMTg@._V1_SY1000_CR0,0,1500,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0MWYwZTEtYzc5Yi00NGM2LTg1YTctNjY2YzQ0NDJhZDAwXkEyXkFqcGdeQXVyNDAyODU1Njc@._V1_SY1000_CR0,0,1499,1000_AL_.jpg"
       ],
-      "id": 12
+      "id":13
     },
     {
       "ComingSoon": true,
@@ -379,7 +427,7 @@
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMjA3MTQ5Ml5BMl5BanBnXkFtZTgwOTA1NDU4OTE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMyNjg5ODYwNF5BMl5BanBnXkFtZTgwMTE1NDU4OTE@._V1_SY1000_CR0,0,1477,1000_AL_.jpg"
       ],
-      "id": 13
+      "id":14
     },
     {
       "title": "Avatar",
@@ -403,29 +451,15 @@
       "Type": "movie",
       "Response": "True",
       "Images": [
+  
+        
+        
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMDg1Nzk1MV5BMl5BanBnXkFtZTcwMDk0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
       ],
-      "id": 14
-    },
-    {
-      "title": "The Wolf of walt street",
-      "Genre": "",
-      "Year": "",
-      "Images": "",
-      "Runtime": "",
-      "imdbRating": "",
-      "id": 15
-    },
-    {
-      "title": "",
-      "Genre": "",
-      "Year": "",
-      "Images": "",
-      "Runtime": "",
-      "imdbRating": "",
-      "id": 16
+      "id":15
     }
-  ],
+ 
+  ] ,
   "comments": [],
   "profile": {
     "name": "typicode"

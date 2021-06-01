@@ -6,24 +6,28 @@ import { Button,Row,Modal,Col } from 'react-bootstrap';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 import Update from '../components/update'
+// import firebaseDB from "../firebase";
 
 
 
 
 
 const Admin = ({movie}) => {
-  const [details, setDetails] = useState({ title: "", Genre: "",Year:"" ,Images:"",Runtime:"",imdbRating:""});
-
-  const handleSubmit = () => {
+  const [details, setDetails] = useState({ title: '', Genre: '',Year:'' ,Images:'',Runtime:'',imdbRating:''});
+  const handleSubmit = (e) => {
     
+    e.preventDefault()
     axios
-      .post("http://localhost:3010/posts",details)
+      .post('https://moviapp-91957-default-rtdb.firebaseio.com/posts.json',details)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
+ 
   }
+ 
+
 
   const deleteMovie=(id)=> {
-    axios.delete(`http://localhost:3010/posts/${id}`)
+    axios.delete(`https://moviapp-91957-default-rtdb.firebaseio.com/posts/${id}/.json`)
     .then(response => {
         console.log("response: delete", response);
       })
@@ -115,7 +119,7 @@ const Admin = ({movie}) => {
               onChange={(e) =>
                 setDetails({ ...details, Genre: e.target.value })
               }
-              // onChange={handleChange}
+              // onChange={handelInput}
               placeholder="genre"
             />
           </Form.Group>
@@ -129,7 +133,7 @@ const Admin = ({movie}) => {
               onChange={(e) =>
                 setDetails({ ...details, Year: e.target.value })
               }
-              // onChange={handleChange}
+              // onChange={handelInput}
               placeholder="year"
             />
           </Form.Group>
@@ -143,8 +147,8 @@ const Admin = ({movie}) => {
               onChange={(e) =>
                 setDetails({ ...details, Runtime: e.target.value })
               }
-              // onChange={handleChange}
-              placeholder="year"
+              // onChange={handelInput}
+              placeholder="Runtime"
             />
           </Form.Group>
           <Form.Group>
@@ -157,7 +161,8 @@ const Admin = ({movie}) => {
               onChange={(e) =>
                 setDetails({ ...details, Images: e.target.value })
               }
-              placeholder="Enter url"
+              // onChange={handelInput}
+              placeholder="Enter url image"
             />
 
           </Form.Group>
@@ -171,6 +176,7 @@ const Admin = ({movie}) => {
               onChange={(e) =>
                 setDetails({ ...details, imdbRating: e.target.value })
               }
+              // onChange={handelInput}
               placeholder="Enter rating movie"
             />
 
@@ -193,13 +199,13 @@ const Admin = ({movie}) => {
         
       <div className="d-flex justify-content-between flex-wrap">
         
-    {  movie.map(el=>
+    {  Object.keys(movie).map(id=>
       <div >
           
       <Row className="pb-5">
           
       <Card style={{ width: '16rem',marginBottom:'20px' }}>
-      <Card.Img variant="top" src={el.Images} height="300px" style={{borderRadius:'5px'}}/>
+      <Card.Img variant="top" src={movie[id].Images} height="300px" style={{borderRadius:'5px'}}/>
       {/* <Card.ImgOverlay className="overlay text-white">
     <Card.Title className="overlayText">{el.Country} / {el.Language}</Card.Title>
     <Card.Text className="overlayText">
@@ -208,23 +214,23 @@ const Admin = ({movie}) => {
 
   </Card.ImgOverlay> */}
         <Card.Body>
-    <Card.Title className="card-title">{el.title}</Card.Title>
+    <Card.Title className="card-title">{movie[id].title}</Card.Title>
     <Card.Text>
-        <p className="card-text">{el.Genre}</p>
+        <p className="card-text">{movie[id].Genre}</p>
     </Card.Text>
     <div className="d-flex justify-content-between">
     {/* <div className="card-text">{el.imdbRating}<i class="fas fa-star ml-1 rating"></i></div> */}
-    <div className="card-text">{el.Year}</div>
-    <div className="card-text">{el.Runtime}</div>
-    <div>
-     <div><Button  onClick={()=>deleteMovie(el.id)} className="delete "><i class="far fa-trash-alt"></i></Button></div>
-     <div> <Update el={el}/></div>
-    </div>
-    
+    <div className="card-text">{movie[id].Year}</div>
+    <div className="card-text">{movie[id].Runtime}</div>
+    <div className="card-text">{movie[id].imdbRating}</div>
 
     </div>
+    <div className="d-flex justify-content-between">
+     <div><Button  onClick={()=>deleteMovie(id)} className="delete "><i class="far fa-trash-alt"></i></Button></div>
+     <div> <Update id={id} movie={movie}/></div>
+    </div>
     <div className="d-flex justify-content-center">
-    <Rater  total={5} interactive={false} rating={el.imdbRating} />
+    <Rater  total={5} interactive={false} rating={movie[id].imdbRating} />
     </div>
         </Card.Body>
       </Card>

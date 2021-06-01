@@ -3,18 +3,18 @@ function Slider() {
     return(
         <div>
             <Carousel>
-  <Carousel.Item interval={1000}>
+  <Carousel.Item interval={2500}>
     <img
       className="d-block w-100"
-      src="img/movie1.webp"
+      src="/img/movie1.webp"
       alt="First slide"
     />
 
   </Carousel.Item>
-  <Carousel.Item interval={500}>
+  <Carousel.Item interval={2500}>
     <img
       className="d-block w-100"
-      src="img/movie2.webp"
+      src="/img/movie2.webp"
       alt="Second slide"
     />
 
@@ -22,7 +22,7 @@ function Slider() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="img/movie3.webp"
+      src="/img/movie3.webp"
       alt="Third slide"
     />
 

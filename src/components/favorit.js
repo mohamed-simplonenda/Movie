@@ -29,30 +29,30 @@ const Favorit = ({
         </Button>
         <Container>
           <div className="d-flex justify-content-between flex-wrap">
-            {favoriteMovie
+            {Object.keys(favoriteMovie)
               .filter((el) =>
-                el.title.toLowerCase().includes(input.toLowerCase())
+              favoriteMovie[el].title.toLowerCase().includes(input.toLowerCase())
               )
               .map((el) => (
                 <Card className="mt-3 mb-5" style={{ width: "50rem" }}>
                    <Row>
                     <Col lg={4}>
-                      <Card.Img variant="top" src={el.Images} />
+                      <Card.Img variant="top" src={favoriteMovie[el].Images} />
                     </Col>
                     <Col lg={8}>
                       <Card.Body>
                         <Card.Title className="card-title">
-                          {el.title}
+                          {favoriteMovie[el].title}
                         </Card.Title>
-                        <Card.Text> {el.Plot}</Card.Text>
+                        <Card.Text> {favoriteMovie[el].Plot}</Card.Text>
                         <div className="d-flex justify-content-between">
-                          <p className="card-text">{el.Genre}</p>
-                          <div className="card-text">{el.Year}</div>
-                          <div className="card-text">{el.Runtime}</div>
+                          <p className="card-text">{favoriteMovie[el].Genre}</p>
+                          <div className="card-text">{favoriteMovie[el].Year}</div>
+                          <div className="card-text">{favoriteMovie[el].Runtime}</div>
                           <Rater
                             total={5}
                             interactive={false}
-                            rating={el.imdbRating}
+                            rating={favoriteMovie[el].imdbRating}
                           />
                         </div>
                         <Button

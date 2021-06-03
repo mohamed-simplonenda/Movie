@@ -23,19 +23,19 @@ const PlayPage = ({play,input,movie,favorites,getFavorites,getFavoriteMovie,getP
        <div className="movieplay mt-3 mb-5" style={{ width: '60rem'}}>
            <Row>
            <Col lg={4} >
-       <img variant="left" src={el.Images} style={{ width: '15rem',height:'20rem' }}/>
+       <img variant="left" src={movie[el].Images} style={{ width: '15rem',height:'20rem' }}/>
            </Col>
            <Col lg={8} >
        <div>
-       <div className="texxtplay"><h3>{el.title}</h3></div>
+       <div className="texxtplay"><h3>{movie[el].title}</h3></div>
        <div>
-         <div className="texxtplay">Genre : {el.Genre}</div>
+         <div className="texxtplay">Genre : {movie[el].Genre}</div>
          <div className="texxtplay">Date of publication : {el.Year}</div>
-         <div className="texxtplay">Duration : {el.Runtime}</div>    
+         <div className="texxtplay">Duration : {movie[el].Runtime}</div>    
        </div>
-         <p className="texxtplay"> {el.Plot}</p>
+         <p className="texxtplay"> {movie[el].Plot}</p>
 
-    <Rater  total={5} interactive={false} rating={el.imdbRating} />
+    <Rater  total={5} interactive={false} rating={movie[el].imdbRating} />
     <div className="mt-3">
       
     <Button variant="outline-warning"   active>

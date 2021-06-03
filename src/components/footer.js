@@ -58,21 +58,21 @@ function Footer() {
 
     <div className="d-flex justify-content-center">
     <img
-        src="img/footer1.jpg"
+        src="/img/footer1.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"
         alt="React Bootstrap logo"
       />
           <img
-        src="img/footer2.jpg"
+        src="/img/footer2.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"
         alt="React Bootstrap logo"
       />
           <img
-        src="img/footer3.jpg"
+        src="/img/footer3.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"
@@ -82,21 +82,21 @@ function Footer() {
         </div>
         <div className="d-flex justify-content-center">
     <img
-        src="img/footer4.jpg"
+        src="/img/footer4.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"
         alt="React Bootstrap logo"
       />
           <img
-        src="img/footer5.jpg"
+        src="/img/footer5.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"
         alt="React Bootstrap logo"
       />
           <img
-        src="img/footer6.jpg"
+        src="/img/footer6.jpg"
         max-width= "100%"
         height= "auto"
         className="mr-2 mb-2"

@@ -26,8 +26,14 @@ function MoviePage({input,getInput,movie,favorites,getFavorites,getFavoriteMovie
 
      
     
-     <div className="slider">
-     <Slider  />
+     <div >
+     {/* <Slider  /> */}
+     <img
+        src="/img/mason-kimbarovsky-E5bGCHzjpr8-unsplash.jpg"
+        width= "100%"
+        height= "auto"
+
+      />
      </div>
      
      

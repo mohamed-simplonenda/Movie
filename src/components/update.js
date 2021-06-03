@@ -4,13 +4,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const Update = ({id,movie}) => {
+const Update = ({id,movie,relaodPage}) => {
     const [input,setInput]=useState({ title:movie[id].title, Genre: movie[id].Genre,Year:movie[id].Year ,Images:movie[id].Images,Runtime:movie[id].Runtime,imdbRating:movie[id].imdbRating})
     const handelCahnge=(e)=>{
         const {name,value}=e.target
         setInput({...input,[name]:value})
       }
-        // function update 
+     // **************************function put movie********************************************
   const updateMovie=(id)=> {
    
     axios.put(`https://moviapp-91957-default-rtdb.firebaseio.com/posts/${id}.json`,input)
@@ -18,15 +18,14 @@ const Update = ({id,movie}) => {
       setInput( response.data);
        
       })
+      .then(res=>relaodPage())
     .catch(err=> 
       console.log(err)
       
     );
     console.log('updateuuuuuuuuuuueeeeeee',input)
   }
-  useEffect(() => {
-    updateMovie() 
-}, [])
+  
     const [show1, setShow1] = useState(false);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);

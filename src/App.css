@@ -211,6 +211,18 @@ padding: 0;
   padding-top: 70px;
   padding-bottom: 70px;
 }
+/* sidebar */
+.sidenav---sidenav---_2tBP {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100% !important;
+  z-index: 1006;
+  min-width: 64px;
+  background:rgb(40, 110, 250) !important;
+  transition: min-width 0.2s;
+}
 /* footer */
 .footer{
   background-color: #222222;

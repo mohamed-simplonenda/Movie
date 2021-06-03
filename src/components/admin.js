@@ -7,6 +7,10 @@ import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 import Update from '../components/update'
 // import firebaseDB from "../firebase";
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+
+// Be sure to include styles at some point, probably during your bootstraping
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 
 
@@ -14,70 +18,88 @@ import Update from '../components/update'
 
 const Admin = ({movie}) => {
   const [details, setDetails] = useState({ title: '', Genre: '',Year:'' ,Images:'',Runtime:'',imdbRating:''});
+  // **************************function post movie********************************************
   const handleSubmit = (e) => {
     
     e.preventDefault()
     axios
       .post('https://moviapp-91957-default-rtdb.firebaseio.com/posts.json',details)
       .then((response) => console.log(response))
+      .then(res=>relaodPage())
       .catch((error) => console.log(error));
  
   }
- 
+  const relaodPage=()=>{
+    window.location.reload()
 
+  }
+ 
+// **************************function delete movie********************************************
 
   const deleteMovie=(id)=> {
     axios.delete(`https://moviapp-91957-default-rtdb.firebaseio.com/posts/${id}/.json`)
     .then(response => {
         console.log("response: delete", response);
       })
+      .then(res=>relaodPage())
     .catch(err=> 
       console.log(err)
     );
   }
-//   const [input,setInput]=useState({ title:details.title, Genre: details.Genre,Year:details.Year ,Images:details.Images,Runtime:details.Runtime,imdbRating:details.imdbRating})
-//   const handelCahnge=(e)=>{
-//    const {name,value}=e.target
-//    setInput({...input,[name]:value})
-//  }
-  
-//   // function update 
-//   const updateMovie=(id)=> {
-   
-//     axios.put(`http://localhost:3010/posts/${id}`,input)
-//     .then(response => {
-//       setInput( response.data);
-       
-//       })
-//     .catch(err=> 
-//       console.log(err)
-      
-//     );
-//     console.log('updateuuuuuuuuuuueeeeeee',input)
-//   }
-//   useEffect(() => {
-//     updateMovie() 
-// }, [])
+
 // modal 1
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
-// modal 2
-  // const [show1, setShow1] = useState(false);
-  // const handleClose1 = () => setShow1(false);
-  // const handleShow1 = () => setShow1(true);
+
 
 
 
   return (
     <div>
         <Container>
-      <Row>
-    
-      {/* <Col lg={3}>
-        </Col> */}
-       <Col lg={12}>
+     <Row>
+
+     <Col lg={3}>
+      <SideNav
+    onSelect={(selected) => {
+        // Add your code here
+    }}
+>
+    <SideNav.Toggle />
+    <SideNav.Nav defaultSelected="home">
+        <NavItem eventKey="home">
+            <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+                Home
+            </NavText>
+        </NavItem>
+        <NavItem eventKey="charts">
+            <NavIcon>
+                <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+                Charts
+            </NavText>
+            <NavItem eventKey="charts/linechart">
+                <NavText>
+                    Line Chart
+                </NavText>
+            </NavItem>
+            <NavItem eventKey="charts/barchart">
+                <NavText>
+                    Bar Chart
+                </NavText>
+            </NavItem>
+        </NavItem>
+    </SideNav.Nav>
+</SideNav>
+</Col>
+<Col lg={9}>
+
       <div className="d-flex justify-content-center mt-5 mb-5">
       <Button variant="success"  onClick={handleShow}>
         Add movie
@@ -190,10 +212,14 @@ const Admin = ({movie}) => {
           </Button>
           </div>
         </Form>
+       
       </Container>
+    
            
         </Modal.Body>
       </Modal>
+      
+      
       
        
         
@@ -205,14 +231,8 @@ const Admin = ({movie}) => {
       <Row className="pb-5">
           
       <Card style={{ width: '16rem',marginBottom:'20px' }}>
-      <Card.Img variant="top" src={movie[id].Images} height="300px" style={{borderRadius:'5px'}}/>
-      {/* <Card.ImgOverlay className="overlay text-white">
-    <Card.Title className="overlayText">{el.Country} / {el.Language}</Card.Title>
-    <Card.Text className="overlayText">
-    {el.Plot}
-    </Card.Text>
-
-  </Card.ImgOverlay> */}
+      <Card.Img variant="top" src={movie[id].Images} height="300px"  style={{borderRadius:'5px',width:'100%',objectFit:'cover'}}/>
+ 
         <Card.Body>
     <Card.Title className="card-title">{movie[id].title}</Card.Title>
     <Card.Text>
@@ -227,7 +247,7 @@ const Admin = ({movie}) => {
     </div>
     <div className="d-flex justify-content-between">
      <div><Button  onClick={()=>deleteMovie(id)} className="delete "><i class="far fa-trash-alt"></i></Button></div>
-     <div> <Update id={id} movie={movie}/></div>
+     <div> <Update relaodPage={relaodPage} id={id} movie={movie}/></div>
     </div>
     <div className="d-flex justify-content-center">
     <Rater  total={5} interactive={false} rating={movie[id].imdbRating} />
@@ -237,120 +257,13 @@ const Admin = ({movie}) => {
       
      </Row>
     
-     {/* <Modal show={show1} onHide={handleClose1}>
-        <Modal.Header closeButton>
-          <Modal.Title>update movie</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <Container>
-        <Form >
-          <Form.Group>
-            <Form.Label>title movie</Form.Label>
-            <br></br>
-            <Form.Control
-              defaultValue={el.title}
-              type="text"
-              name="title"
-              onChange={handelCahnge}
-              placeholder="Enter title"
-            />
-            <Form.Text className="text-muted">
-              
-            </Form.Text>
-          </Form.Group>
-
-
-          <Form.Group>
-            <Form.Label>genre</Form.Label>
-            <br></br>
-            <Form.Control
-            defaultValue={el.Genre}
-              type="text"
-              name="Genre"
-              
-                            onChange={handelCahnge}
-
-              // onChange={handleChange}
-              placeholder="genre"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>year</Form.Label>
-            <br></br>
-            <Form.Control
-            defaultValue={el.Year}
-              type="text"
-              name="Year"
-              
-                            onChange={handelCahnge}
-
-              // onChange={handleChange}
-              placeholder="year"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Runtime</Form.Label>
-            <br></br>
-            <Form.Control
-            defaultValue={el.Runtime}
-              type="text"
-              name="Runtime"
-              
-                            onChange={handelCahnge}
-
-              // onChange={handleChange}
-              placeholder="Runtime"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>image movie</Form.Label>
-            <br></br>
-            <Form.Control
-            defaultValue={el.Images}
-              type="text"
-              name="Images"
-              
-                            onChange={handelCahnge}
-
-              placeholder="Enter url"
-            />
-
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Rating movie</Form.Label>
-            <br></br>
-            <Form.Control
-            defaultValue={el.imdbRating}
-              type="text"
-              name="imdbRating"
-              
-                            onChange={handelCahnge}
-
-              placeholder="Enter rating movie"
-            />
-
-          </Form.Group>
-          <div className="d-flex justify-content-end">
-          <Button variant="secondary" className="mr-3" onClick={handleClose1}>
-            Close
-          </Button>
-          <Button onClick={()=>updateMovie(el.id)} variant="primary"  className="submit">
-            update
-          </Button>
-          </div>
-        </Form>
-      </Container>
-
-        </Modal.Body>
-      </Modal>
-     */}
+     
      
      </div> )}
      
      </div>
 
     
-     
      </Col>
      </Row>
      </Container>

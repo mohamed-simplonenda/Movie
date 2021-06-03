@@ -26,8 +26,14 @@ function SeriePage({input,getInput,movie,favorites,getFavorites,getFavoriteMovie
 
      
     
-     <div className="slider">
-     <Slider  />
+     <div>
+     {/* <Slider  /> */}
+     <img
+        src="/img/jakob-owens-CiUR8zISX60-unsplash.jpg"
+        width= "100%"
+        height= "auto"
+
+      />
      </div>
      
      

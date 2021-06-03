@@ -83,7 +83,7 @@ function App() {
           <Route path="/App-Movie/about" ><About movie={movie} getMovie={getMovie} favorites={favorites}/></Route>
           <Route path="/App-Movie/contact" ><Contact movie={movie} getMovie={getMovie} favorites={favorites}/></Route>
           <Route path="/App-Movie/favorit" ><Favorit movie={movie} getMovie={getMovie} favorites={favorites} favoriteMovie={favoriteMovie} input={input} removeFavoriteMovie={removeFavoriteMovie} removeFavoriteMovieAll={removeFavoriteMovieAll}/></Route>
-          <Route path="/App-Movie/play" ><PlayPage play={play}  movie={movie} getFavorites={getFavorites} getFavoriteMovie={getFavoriteMovie} getPlay={getPlay} /></Route>
+          <Route path="/play" ><PlayPage play={play}  movie={movie} getFavorites={getFavorites} getFavoriteMovie={getFavoriteMovie} getPlay={getPlay} /></Route>
           <Route path="/App-Movie/admin" ><Admin movie={movie} setMovie={setMovie} /></Route>
           <Route path="/update"> <Update/></Route>
           

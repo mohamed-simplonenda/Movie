@@ -10,18 +10,7 @@ import 'react-rater/lib/react-rater.css'
 
 // input
 function Movie ({input,movie,getFavorites,getFavoriteMovie,getPlay}) {
-  // const [movie, setMovie] = useState([])
-  // const getMovie = ()=>{
-    
-  //   fetch('movies.json').then(
-  //         response => response.json()).then 
-  //                  (movies => setMovie(movies));
-  // }
-  
-  // useEffect(()=> {getMovie()
-  // },[])
 
-  
   return(
     Object.keys(movie)
     .filter(el=>movie[el].title.toLowerCase().includes(input.toLowerCase())

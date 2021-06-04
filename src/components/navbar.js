@@ -36,7 +36,9 @@ function Menu({getInput,favorites}) {
       <Button variant="outline-secondary"><i class="fas fa-search  "></i></Button>
 
     </Form>
-    <Link to="/App-Movie/favorit"><i class="fas fa-heart iconeNav "></i><span class="badge bg-warning rounded-circle ml-1" id="val">{favorites}</span></Link>
+    <Link to="/App-Movie/favorit"><i class="fas fa-heart iconeNav "></i>
+    <span class="badge bg-warning rounded-circle ml-1" id="val">{favorites}</span>
+    </Link>
   </Navbar.Collapse>
   </div>
 </Navbar>

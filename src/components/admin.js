@@ -58,10 +58,10 @@ const Admin = ({movie}) => {
 
   return (
     <div>
-        <Container>
+        
      <Row>
 
-     <Col lg={3}>
+     <Col lg={2}>
       <SideNav
     onSelect={(selected) => {
         // Add your code here
@@ -79,10 +79,10 @@ const Admin = ({movie}) => {
         </NavItem>
         <NavItem eventKey="charts">
             <NavIcon>
-                <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
+                <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em' }} />
             </NavIcon>
             <NavText>
-                Charts
+                Users
             </NavText>
             <NavItem eventKey="charts/linechart">
                 <NavText>
@@ -98,7 +98,8 @@ const Admin = ({movie}) => {
     </SideNav.Nav>
 </SideNav>
 </Col>
-<Col lg={9}>
+<Col lg={10}>
+  <Container>
 
       <div className="d-flex justify-content-center mt-5 mb-5">
       <Button variant="success"  onClick={handleShow}>
@@ -263,10 +264,10 @@ const Admin = ({movie}) => {
      
      </div>
 
-    
+     </Container>
      </Col>
      </Row>
-     </Container>
+     
     </div>
   );
 };
